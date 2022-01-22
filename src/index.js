@@ -1,13 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import ObonFestivalGame from './ObonFestivalGame';
 import reportWebVitals from './reportWebVitals';
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+`;
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Wrapper>
+    <ObonFestivalGame />
+  </Wrapper>,
   document.getElementById('root')
 );
 
