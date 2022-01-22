@@ -1,5 +1,6 @@
 {
   "name": "sy-game-demo",
+  "homepage": "https://didibear5.github.io/sy-game-demo",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
