@@ -23,7 +23,7 @@ export default class Censer extends React.Component {
       renderer: 'svg',
       loop: false,
       autoplay: false,
-      path: '/images/obon-festival-game/censer.json',
+      path: process.env.PUBLIC_URL + '/images/obon-festival-game/censer.json',
     });
 
     this.setState({ censer });

@@ -88,22 +88,22 @@ const ObonFestivalGame = () => {
 
   return (
     <Wrapper>
-      <Moon src="/images/obon-festival-game/img-ghostfestival-sun@2x.png" />
+      <Moon src={process.env.PUBLIC_URL + '/images/obon-festival-game/img-ghostfestival-sun@2x.png'}/>
       {playState ? (
         <React.Fragment>
           <LanternRight />
           <LanternLeft />
           <Tips
             id="fruit-tips"
-            src="/images/obon-festival-game/btn-ghostfestival-fruit@2x.png"
+            src={process.env.PUBLIC_URL + '/images/obon-festival-game/btn-ghostfestival-fruit@2x.png'}
           />
           <Tips
             id="meat-tips"
-            src="/images/obon-festival-game/btn-ghostfestival-meat@2x.png"
+            src={process.env.PUBLIC_URL + '/images/obon-festival-game/btn-ghostfestival-meat@2x.png'}
           />
           <Tips
             id="incense-tips"
-            src="/images/obon-festival-game/btn-ghostfestival-incense@2x.png"
+            src={process.env.PUBLIC_URL + '/images/obon-festival-game/btn-ghostfestival-incense@2x.png'}
           />
           <Censer start={playCenser} />
           <PrayingCash

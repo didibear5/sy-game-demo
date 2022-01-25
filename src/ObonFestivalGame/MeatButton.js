@@ -19,12 +19,11 @@ export default class MeatButton extends React.Component {
 
   componentDidMount() {
     const meatButton = Lottie.loadAnimation({
-      // eslint-disable-line
       container: document.getElementById('meat-button'),
       renderer: 'svg',
       loop: true,
       autoplay: true,
-      path: '/images/obon-festival-game/meat_button.json',
+      path: process.env.PUBLIC_URL + '/images/obon-festival-game/meat_button.json',
     });
   }
 

@@ -24,7 +24,7 @@ export default class IncenseButton extends React.Component {
       renderer: 'svg',
       loop: true,
       autoplay: true,
-      path: '/images/obon-festival-game/incense_button.json',
+      path: process.env.PUBLIC_URL + '/images/obon-festival-game/incense_button.json',
     });
   }
 

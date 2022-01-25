@@ -21,7 +21,7 @@ export default class PrayingCash extends React.Component {
       renderer: 'svg',
       loop: false,
       autoplay: false,
-      path: '/images/obon-festival-game/prayingcash.json',
+      path: process.env.PUBLIC_URL + '/images/obon-festival-game/prayingcash.json',
       rendererSettings: {
         filterSize: {
           width: '1.2',
@@ -37,7 +37,7 @@ export default class PrayingCash extends React.Component {
       renderer: 'svg',
       loop: true,
       autoplay: true,
-      path: '/images/obon-festival-game/loopprayingcash.json',
+      path: process.env.PUBLIC_URL + '/images/obon-festival-game/loopprayingcash.json',
       rendererSettings: {
         filterSize: {
           width: '1.2',

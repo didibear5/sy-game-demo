@@ -20,7 +20,7 @@ export default class LanternLeft extends React.Component {
       renderer: 'svg',
       loop: false,
       autoplay: false,
-      path: '/images/obon-festival-game/lantern.json',
+      path: process.env.PUBLIC_URL + '/images/obon-festival-game/lantern.json',
       rendererSettings: {
         preserveAspectRatio: 'xMinYMid meet',
       },
@@ -30,7 +30,7 @@ export default class LanternLeft extends React.Component {
       renderer: 'svg',
       loop: true,
       autoplay: false,
-      path: '/images/obon-festival-game/looplantern.json',
+      path: process.env.PUBLIC_URL + '/images/obon-festival-game/looplantern.json',
       rendererSettings: {
         preserveAspectRatio: 'xMinYMid meet',
       },

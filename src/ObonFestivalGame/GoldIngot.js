@@ -21,7 +21,7 @@ export default class Goldingot extends React.Component {
       renderer: 'svg',
       loop: false,
       autoplay: false,
-      path: '/images/obon-festival-game/goldingot.json',
+      path: process.env.PUBLIC_URL + '/images/obon-festival-game/goldingot.json',
       rendererSettings: {
         filterSize: {
           width: '1.2',
@@ -37,7 +37,7 @@ export default class Goldingot extends React.Component {
       renderer: 'svg',
       loop: true,
       autoplay: true,
-      path: '/images/obon-festival-game/loopgoldingot.json',
+      path: process.env.PUBLIC_URL + '/images/obon-festival-game/loopgoldingot.json',
       rendererSettings: {
         filterSize: {
           width: '1.2',

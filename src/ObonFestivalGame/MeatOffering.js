@@ -22,7 +22,7 @@ export default class MeatOffering extends React.Component {
       renderer: 'svg',
       loop: false,
       autoplay: false,
-      path: '/images/obon-festival-game/meatoffering.json',
+      path: process.env.PUBLIC_URL + '/images/obon-festival-game/meatoffering.json',
       rendererSettings: {
         filterSize: {
           width: '1.2',
@@ -37,7 +37,7 @@ export default class MeatOffering extends React.Component {
       renderer: 'svg',
       loop: true,
       autoplay: true,
-      path: '/images/obon-festival-game/loopmeatoffering.json',
+      path: process.env.PUBLIC_URL + '/images/obon-festival-game/loopmeatoffering.json',
       rendererSettings: {
         filterSize: {
           width: '1.2',

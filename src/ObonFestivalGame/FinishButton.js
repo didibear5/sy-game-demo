@@ -51,7 +51,7 @@ export default class FinishButton extends React.Component {
       renderer: 'svg',
       loop: false,
       autoplay: false,
-      path: '/images/obon-festival-game/pray.json',
+      path: process.env.PUBLIC_URL + '/images/obon-festival-game/pray.json',
       rendererSettings: {
         filterSize: {
           width: '1.2',
@@ -90,7 +90,7 @@ export default class FinishButton extends React.Component {
         <PrayWrapper id="pray" />
         <Img
           id="pray-done"
-          src="/images/obon-festival-game/img-ghostfestival-praydone@2x.png"
+          src={process.env.PUBLIC_URL + '/images/obon-festival-game/img-ghostfestival-praydone@2x.png'}
         />
         {this.state.complete ? (
           <PlayAgainBtn onClick={this.props.onPlayAgainClick}>
