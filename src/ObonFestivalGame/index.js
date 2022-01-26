@@ -94,6 +94,7 @@ const ObonFestivalGame = () => {
   };
 
   const onPlayAgainClick = () => {
+    setPlayLanternAndCenser(false)
     setPlayPrayingCashAndGoldIngot(false);
     setPlayFruitOffering(false);
     setPlayMeatOffering(false);
