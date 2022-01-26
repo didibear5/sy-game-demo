@@ -14,6 +14,7 @@ import IncenseButton from './IncenseButton';
 import FinishButton from './FinishButton';
 
 const ObonFestivalGame = () => {
+  const [playLanternAndCenser, setPlayLanternAndCenser] = useState(false);
   const [playPrayingCashAndGoldIngot, setPlayPrayingCashAndGoldIngot] =
     useState(false);
   const [playFruitOffering, setPlayFruitOffering] = useState(false);
@@ -24,10 +25,26 @@ const ObonFestivalGame = () => {
   const [playState, setPlayState] = useState(true);
 
   useEffect(() => {
-    startGame();
+    function load(src) {
+      return new Promise((resolve, reject) => {
+          const image = new Image();
+          image.addEventListener('load', resolve);
+          image.addEventListener('error', reject);
+          image.src = src;
+      });
+    }
+
+    const backgroundImage = process.env.PUBLIC_URL + '/images/obon-festival-game/img-ghostfestival-altar_large@2x.png';
+    load(backgroundImage).then(() => {
+      document.getElementById('obon-festival-gam-wrapper').style.backgroundImage = `url(${backgroundImage})`;
+      startGame();
+    });
   }, []);
 
   function startGame() {
+    setTimeout(() => {
+      setPlayLanternAndCenser(true);
+    }, 500);
     setTimeout(() => {
       setPlayPrayingCashAndGoldIngot(true);
     }, 1500);
@@ -87,12 +104,18 @@ const ObonFestivalGame = () => {
   };
 
   return (
-    <Wrapper>
+    <Wrapper id='obon-festival-gam-wrapper'>
       <Moon src={process.env.PUBLIC_URL + '/images/obon-festival-game/img-ghostfestival-sun@2x.png'}/>
       {playState ? (
         <React.Fragment>
-          <LanternRight />
-          <LanternLeft />
+          <LanternRight
+            start={playLanternAndCenser}
+            show={playLanternAndCenser}
+          />
+          <LanternLeft
+            start={playLanternAndCenser}
+            show={playLanternAndCenser}
+          />
           <Tips
             id="fruit-tips"
             src={process.env.PUBLIC_URL + '/images/obon-festival-game/btn-ghostfestival-fruit@2x.png'}
@@ -105,7 +128,8 @@ const ObonFestivalGame = () => {
             id="incense-tips"
             src={process.env.PUBLIC_URL + '/images/obon-festival-game/btn-ghostfestival-incense@2x.png'}
           />
-          <Censer start={playCenser} />
+          <Censer start={playCenser}
+            show={playLanternAndCenser} />
           <PrayingCash
             start={playPrayingCashAndGoldIngot}
             show={playPrayingCashAndGoldIngot}

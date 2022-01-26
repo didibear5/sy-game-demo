@@ -43,14 +43,18 @@ export default class LanternLeft extends React.Component {
       if (lanternLoopEl) lanternLoopEl.style.display = 'block';
       lanternLoop.play();
     });
-    setTimeout(() => {
-      lantern.play();
-    }, 500);
+    this.setState({ lantern });
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (!prevProps.start && this.props.start) {
+      this.state.lantern.play();
+    }
   }
 
   render() {
     return (
-      <div>
+      <div style={{ display: this.props.show === true ? 'block' : 'none' }}>
         <Wrapper id="lantern-left" />
         <Wrapper id="lantern-left-loop" style={{ display: 'none' }} />
       </div>

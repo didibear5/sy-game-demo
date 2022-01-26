@@ -36,6 +36,10 @@ export default class Censer extends React.Component {
   }
 
   render() {
-    return <Wrapper id="censer" />;
+    return (
+      <div style={{ display: this.props.show === true ? 'block' : 'none' }}>
+        <Wrapper id="censer" />;
+      </div>
+    )
   }
 }

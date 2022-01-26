@@ -7,7 +7,6 @@ export const Wrapper = styled.div`
   height: 705px;
   overflow: hidden;
   position: relative;
-  background: url(${process.env.PUBLIC_URL + '/images/obon-festival-game/img-ghostfestival-altar_large@2x.png'});
   background-size: cover;
   background-position: center;
   @media screen and (max-width: 450px) {
