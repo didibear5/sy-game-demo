@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/sy-game-demo/static/js/main.48e0d09e.js",
+    "main.js": "/sy-game-demo/static/js/main.9b91bd19.js",
     "static/js/787.f9dc0f16.chunk.js": "/sy-game-demo/static/js/787.f9dc0f16.chunk.js",
     "index.html": "/sy-game-demo/index.html",
-    "main.48e0d09e.js.map": "/sy-game-demo/static/js/main.48e0d09e.js.map",
+    "main.9b91bd19.js.map": "/sy-game-demo/static/js/main.9b91bd19.js.map",
     "787.f9dc0f16.chunk.js.map": "/sy-game-demo/static/js/787.f9dc0f16.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.48e0d09e.js"
+    "static/js/main.9b91bd19.js"
   ]
 }
